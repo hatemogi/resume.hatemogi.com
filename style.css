@@ -21,9 +21,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MaruBuri-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: 'RIDIBatang';
+  font-family: 'MaruBuri-Regular';
   font-size: 16px;
   line-height: 1.8em;
 }
@@ -75,6 +82,8 @@ h1 {
   text-transform: uppercase;
   margin: 1em 0;
   font-family: 'HangeulNuri-Bold';
+  /* font-family: 'HakgyoansimWoojuR'; */
+
 }
 
 h3 {

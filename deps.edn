@@ -1,0 +1,2 @@
+{:deps
+ {hiccup/hiccup {:mvn/version "2.0.0-RC3"}}}
