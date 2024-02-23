@@ -3,9 +3,6 @@
 
 (def li (partial map (partial vector :li)))
 
-(def og-tags
-  [])
-
 (def 헤더
   [:head
    [:meta {:charset "UTF-8"}]
@@ -20,6 +17,7 @@
    [:meta {:property "og:image:width" :content "1024"}]
    [:meta {:property "og:image:height" :content "1024"}]
    [:meta {:property "og:url" :content "https://resume.hatemogi.com/"}]
+   [:link {:rel "shortcut icon" :href "favicon.png"}]
    [:link {:rel "stylesheet"
            :href "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
            :integrity "sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -94,7 +92,7 @@
 (def 학력
   [:section [:h2 "학력"]
    [:article.학력
-    [:div.학교 [:div.강조 "홍익대학교 컴퓨터공학과 졸업"] [:div.기간 "1996 - 2000"]]
+    [:div.학교.컬럼 [:div.강조 "홍익대학교 컴퓨터공학과 졸업"] [:div.기간 "1996 - 2000"]]
     [:div.설명 [:div "전공성적우수 장학금 2학기분 수령"] [:div "졸업과제: 리얼타임 리눅스 RTLinux 커널 분석"]]]])
 
 (def 발표경험

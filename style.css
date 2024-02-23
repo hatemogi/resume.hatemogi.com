@@ -21,7 +21,7 @@ body {
   margin: 0;
   font-family: var(--serif-font);
   font-size: 16px;
-  line-height: 1.8em;
+  line-height: 1.6rem;
 }
 
 a {
@@ -124,17 +124,7 @@ article.경력 {
   flex-direction: row;
 }
 
-
 .컬럼>* {
-  flex: 1;
-}
-
-
-.학교 {
-  display: flex;
-}
-
-.학교>div {
   flex: 1;
 }
 
@@ -154,6 +144,10 @@ footer {
     display: block;
   }
 
+  section {
+    padding: 0;
+  }
+
   .course .title,
   .course .description {
     max-width: 100%;
@@ -161,6 +155,20 @@ footer {
 }
 
 @media only screen and (max-width: 576px) {
+  .컬럼 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    padding: 0;
+    margin: 0.5rem;
+  }
+
+  ul {
+    padding-inline-start: 1em;
+  }
+
   .skills {
     display: block;
   }
