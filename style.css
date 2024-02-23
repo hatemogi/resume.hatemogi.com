@@ -69,10 +69,8 @@ header img {
 }
 
 h1 {
-  text-transform: uppercase;
   margin: 1em 0;
 }
-
 
 h1,
 h2,
@@ -91,7 +89,6 @@ section>h2 {
 main {
   max-width: 1140px;
 }
-
 
 .fab {
   border: 1px solid black;
@@ -124,22 +121,8 @@ article.경력 {
   flex-direction: row;
 }
 
-
 .컬럼>* {
   flex: 1;
-}
-
-
-.학교 {
-  display: flex;
-}
-
-.학교>div {
-  flex: 1;
-}
-
-.course .desc p {
-  padding-left: 1em;
 }
 
 footer {
@@ -149,26 +132,9 @@ footer {
   text-align: right;
 }
 
-@media only screen and (max-width: 768px) {
-  .course {
-    display: block;
-  }
-
-  .course .title,
-  .course .description {
-    max-width: 100%;
-  }
-}
+@media only screen and (max-width: 768px) {}
 
 @media only screen and (max-width: 576px) {
-  .skills {
-    display: block;
-  }
-
-  .skills .column {
-    max-width: 100%;
-  }
-
   footer {
     text-align: center;
   }
