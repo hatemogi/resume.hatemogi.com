@@ -3,6 +3,9 @@
 
 (def li (partial map (partial vector :li)))
 
+(def og-tags
+  [])
+
 (def 헤더
   [:head
    [:meta {:charset "UTF-8"}]
@@ -10,6 +13,13 @@
    [:meta {:name "description" :content "김대현 이력서"}]
    [:meta {:name "author" :content "hatemogi"}]
    [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
+   [:meta {:property "og:title" :content "김대현 이력서"}]
+   [:meta {:property "og:description" :content "시니어 백엔드 개발자 김대현 이력서"}]
+   [:meta {:property "og:type" :content "website"}]
+   [:meta {:property "og:image" :content "https://hatemogi.com/img/hatemogi.png"}]
+   [:meta {:property "og:image:width" :content "1024"}]
+   [:meta {:property "og:image:height" :content "1024"}]
+   [:meta {:property "og:url" :content "https://resume.hatemogi.com/"}]
    [:link {:rel "stylesheet"
            :href "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
            :integrity "sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -36,8 +46,8 @@
    [:article.skills
     [:div.컬럼
      [:div [:h3 "우수한 기술"] (li ["Scala" "Clojure" "Haskell" "Elm" "Java"])]
-     [:div [:h3 "충분한 기술"] (li ["Python" "TypeScript" "Kotlin" "Go" "PostgreSQL" "Amazon Web Services" "Google Cloud Platform" "Netty" "Docker"])]
-     [:div [:h3 "경험한 기술"] (li ["Rust" "C" "Kubernetes"])]]
+     [:div [:h3 "충분한 기술"] (li ["TypeScript" "JavaScript" "Kotlin" "PostgreSQL" "Amazon Web Services" "Google Cloud Platform" "Netty" "Docker"])]
+     [:div [:h3 "경험한 기술"] (li ["Rust" "Go" "Python" "C" "C++" "Pascal" "Assembly" "Kubernetes"])]]
     [:div
      [:h3 "외국어"]
      [:p "🇺🇸 듣기/읽기 상급, 말하기/쓰기 중급. TOEFL CBT 260"]
@@ -128,7 +138,8 @@
             (when 데모 [:a {:href 데모 :title "데모"} [:i {:class "fa-solid fa-laptop-code"}]]) " "
             (when 유튜브 [:a {:href 유튜브 :title "유튜브영상"} [:i {:class "fa-brands fa-youtube"}]])]])
         (sort-by :연도 >
-                 [{:연도 2017 :제목 "스타벅스 WiFi 자동 연결 앱"
+                 [{:연도 2023 :제목 "Elm으로 만든 탁구 점수판 웹앱"}
+                  {:연도 2017 :제목 "스타벅스 WiFi 자동 연결 앱"
                    :미디엄 "https://hatemogi.medium.com/list/wifi-199c3b2cb80f"}
                   {:연도 2022 :제목 "TypeScript와 three.js로 만든 큐브 연습용 웹페이지"
                    :미디엄 "https://medium.com/happyprogrammer-in-jeju/큐브-연습용-웹페이지-개발기-0-76e638752776"
