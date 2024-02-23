@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
 @font-face {
   font-family: 'RIDIBatang';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
@@ -8,29 +6,20 @@
 }
 
 @font-face {
-  font-family: 'HakgyoansimWoojuR';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'HangeulNuri-Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'MaruBuri-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+:root {
+  --sans-font: 'NEXON Lv2 Gothic';
+  --serif-font: 'RIDIBatang';
 }
 
 body {
   margin: 0;
-  font-family: 'MaruBuri-Regular';
+  font-family: var(--serif-font);
   font-size: 16px;
   line-height: 1.8em;
 }
@@ -65,7 +54,7 @@ header {
   background-image: url('./img/bg.jpg');
   background-size: cover;
   background-position: fixed;
-  color: white;
+  color: black;
 }
 
 header section {
@@ -75,36 +64,37 @@ header section {
 
 header img {
   border-radius: 50%;
-  max-width: 150px;
+  border: 1px solid black;
+  max-width: 200px;
 }
 
 h1 {
   text-transform: uppercase;
   margin: 1em 0;
-  font-family: 'HangeulNuri-Bold';
-  /* font-family: 'HakgyoansimWoojuR'; */
-
 }
 
-h3 {
-  text-transform: uppercase;
-}
 
+h1,
+h2,
 h3,
 h4 {
-  font-weight: bold;
+  font-family: var(--sans-font);
+  font-weight: 700;
+}
+
+section>h2 {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(97, 176, 255);
 }
 
 main {
   max-width: 1140px;
 }
 
-main section:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-}
 
 .fab {
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 50%;
   font-size: 1.5em;
   width: 1.5em;
@@ -115,66 +105,41 @@ main section:not(:last-child) {
 }
 
 a .fab {
-  color: white;
+  color: black;
 }
 
-.course,
-.skills {
-  display: -ms-flexbox;
+article.경력 {
+  background-color: rgb(248, 249, 255);
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.강조 {
+  font-family: var(--sans-font);
+  font-weight: bold;
+}
+
+.컬럼 {
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.course .title {
-  color: #509e98;
-  -ms-flex: 0 0 33.3%;
-  flex: 0 0 33.3%;
-  max-width: 33%;
+
+.컬럼>* {
+  flex: 1;
 }
 
-.course .descrition {
-  -ms-flex: 0 0 66.6%;
-  flex: 0 0 66.6%;
-  max-width: 66.6%;
+
+.학교 {
+  display: flex;
 }
 
-.course .descrition p {
+.학교>div {
+  flex: 1;
+}
+
+.course .desc p {
   padding-left: 1em;
-}
-
-.skills .column {
-  -ms-flex: 0 0 50%%;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.skills .column ul,
-ul.job-description {
-  list-style-type: none;
-}
-
-.skills .column ul>li:before {
-  content: "►";
-  padding-right: 0.5em;
-  color: #509e98;
-}
-
-.school,
-.job-title {
-  text-transform: capitalize;
-}
-
-.school span,
-.job-title span {
-  color: #889499;
-  text-decoration: underline;
-}
-
-ul.job-description li:before {
-  content: "✔";
-  padding-right: 0.5em;
-  color: #509e98;
 }
 
 footer {
@@ -190,7 +155,7 @@ footer {
   }
 
   .course .title,
-  .course .descrition {
+  .course .description {
     max-width: 100%;
   }
 }
