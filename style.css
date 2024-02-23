@@ -69,10 +69,8 @@ header img {
 }
 
 h1 {
-  text-transform: uppercase;
   margin: 1em 0;
 }
-
 
 h1,
 h2,
@@ -91,7 +89,6 @@ section>h2 {
 main {
   max-width: 1140px;
 }
-
 
 .fab {
   border: 1px solid black;
@@ -128,10 +125,6 @@ article.경력 {
   flex: 1;
 }
 
-.course .desc p {
-  padding-left: 1em;
-}
-
 footer {
   padding: 1em 1.5em;
   background: #A7B8BF;
@@ -140,18 +133,10 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  .course {
-    display: block;
-  }
-
   section {
     padding: 0;
   }
 
-  .course .title,
-  .course .description {
-    max-width: 100%;
-  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -167,14 +152,6 @@ footer {
 
   ul {
     padding-inline-start: 1em;
-  }
-
-  .skills {
-    display: block;
-  }
-
-  .skills .column {
-    max-width: 100%;
   }
 
   footer {
