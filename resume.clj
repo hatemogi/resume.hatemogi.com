@@ -57,7 +57,7 @@
       :한일 ["Haskell로 신규 백엔드 시스템을 구축 중입니다."]}
      {:기간 "2020.3 - 2022.5" :회사명 "라인+" :직위 "ADS > MONAD > Lead"
       :스택 ["Scala" "PostgreSQL" "Kafka"]
-      :한일 ["LINE메신저 타임라인 서비스 광고 수익 배분 시스템 개발"
+      :한일 ["LINE 메신저 타임라인 서비스 광고 수익 배분 시스템 개발"
            "Scala로 개발해서 운영하며, 개발팀을 구축해 리딩했습니다."
            "일본과 대만에 성공적 서비스"]}
      {:기간 "2018.9 - 2020.2" :회사명 "NHN" :직위 "Dooray개발실 > 수석"
@@ -89,25 +89,28 @@
 
 (def 발표경험
   [:section [:h2 "발표 경험"]
-   (map (fn [{주제 :주제 링크 :링크 영상 :영상}]
+   (map (fn [{주제 :주제 링크 :링크 영상 :영상 유튜브 :유튜브 미디엄 :미디엄}]
           [:article.발표
-           (if 링크
-             [:a {:href 링크} [:div.title 주제]]
-             [:div.title 주제])])
+           [:div.title 주제 " "
+            (when 링크 [:a {:href 링크} [:i {:class "fa-solid fa-link"}]])
+            " "
+            (when 유튜브 [:a {:href 유튜브} [:i {:class "fa-brands fa-youtube"}]]) " "
+            (when 미디엄 [:a {:href 미디엄} [:i {:class "fa-brands fa-medium"}]])]])
         [{:주제 "인프콘2023 - 함수형 프로그래밍 3대장 경험기: 클로저, 스칼라, 하스켈"
           :링크 "https://www.inflearn.com/conf/infcon-2023/session-detail?id=744"
           :영상 "https://www.inflearn.com/course/lecture?courseSlug=인프콘2023-다시보기&unitId=177889"}
          {:주제 "LiftIO 2022 - 두 다리 뻗고 자는 (탄탄한) 함수형 프로그래밍"
-          :링크 "https://festa.io/events/2876"}
+          :링크 "https://festa.io/events/2876"
+          :미디엄 "https://medium.com/happyprogrammer-in-jeju/liftio-2022-오프닝-발표-기초-탄탄-함수형-프로그래밍-59e0a3233a32"}
          {:주제 "LiftIO 2021 - 연속된 우연으로 꾸려진 개발팀의 함수형 Scala 활용기"
           :링크 "https://liftio.org/2021/"}
          {:주제 "라인 백엔드 개발자의 함수형 프로그래밍 언어 실전 사용기"
-          :영상 "https://www.youtube.com/watch?v=H6JxxWL6bJI"}
+          :유튜브 "https://www.youtube.com/watch?v=H6JxxWL6bJI"}
          {:주제 "2017년 제6 회 리스프 세미나 — 클로저 소개"
-          :링크 "https://medium.com/happyprogrammer-in-jeju/클로저-소개-제6회-리스프-세미나-발표-dc6700e0821d"}
+          :미디엄 "https://medium.com/happyprogrammer-in-jeju/클로저-소개-제6회-리스프-세미나-발표-dc6700e0821d"}
          {:주제 "PyCon2016 라이트닝톡 — 개발하는 라이더의 연비계산"
-          :링크 "https://medium.com/happyprogrammer-in-jeju/파이콘-2016-라이트닝-토크-발표-후기-763135a2a623"
-          :영상 "https://www.youtube.com/watch?v=46UkzB-3z3Y"}
+          :미디엄 "https://medium.com/happyprogrammer-in-jeju/파이콘-2016-라이트닝-토크-발표-후기-763135a2a623"
+          :유튜브 "https://www.youtube.com/watch?v=46UkzB-3z3Y"}
          {:주제 "DevOn2013 — 사내Git저장소개발사례" :링크 "https://www.slideshare.net/hatemogi/devon2013-git"}])])
 
 (def 사이드프로젝트
@@ -123,7 +126,7 @@
   [:section [:h2 "교육 수료"]
    (map (fn [{주제 :주제 연도 :연도 수료증 :수료증}]
           [:article.course
-           [:div.title 연도 ", " 주제 " " [:a {:href 수료증} "[수료증]"]]])
+           [:div.title 연도 ", " 주제 " " [:a {:href 수료증} [:i {:class "fa-solid fa-certificate"}] [:small "수료증"]]]])
         [{:주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
           :연도 2022
           :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
