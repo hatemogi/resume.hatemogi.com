@@ -89,22 +89,24 @@
 
 (def 발표경험
   [:section [:h2 "발표 경험"]
-   (map (fn [{주제 :주제 링크 :링크 영상 :영상 유튜브 :유튜브 미디엄 :미디엄}]
+   (map (fn [{주제 :주제 링크 :링크 영상 :영상 유튜브 :유튜브 미디엄 :미디엄 깃허브 :깃허브}]
           [:article.발표
-           [:div.title 주제 " "
-            (when 링크 [:a {:href 링크} [:i {:class "fa-solid fa-link"}]])
-            " "
-            (when 유튜브 [:a {:href 유튜브} [:i {:class "fa-brands fa-youtube"}]]) " "
-            (when 미디엄 [:a {:href 미디엄} [:i {:class "fa-brands fa-medium"}]])]])
+           [:div 주제 " "
+            (when 링크 [:a {:href 링크} [:i {:class "fa-solid fa-link"}]]) " "
+            (when 깃허브 [:a {:href 깃허브} [:i {:class "fa-brands fa-github"}]]) " "
+            (when 미디엄 [:a {:href 미디엄} [:i {:class "fa-brands fa-medium"}]]) " "
+            (when 유튜브 [:a {:href 유튜브} [:i {:class "fa-brands fa-youtube"}]])]])
         [{:주제 "인프콘2023 - 함수형 프로그래밍 3대장 경험기: 클로저, 스칼라, 하스켈"
           :링크 "https://www.inflearn.com/conf/infcon-2023/session-detail?id=744"
           :영상 "https://www.inflearn.com/course/lecture?courseSlug=인프콘2023-다시보기&unitId=177889"}
          {:주제 "LiftIO 2022 - 두 다리 뻗고 자는 (탄탄한) 함수형 프로그래밍"
           :링크 "https://festa.io/events/2876"
+          :깃허브 "https://github.com/hatemogi/liftio2022"
           :미디엄 "https://medium.com/happyprogrammer-in-jeju/liftio-2022-오프닝-발표-기초-탄탄-함수형-프로그래밍-59e0a3233a32"}
          {:주제 "LiftIO 2021 - 연속된 우연으로 꾸려진 개발팀의 함수형 Scala 활용기"
-          :링크 "https://liftio.org/2021/"}
-         {:주제 "라인 백엔드 개발자의 함수형 프로그래밍 언어 실전 사용기"
+          :링크 "https://liftio.org/2021/"
+          :깃허브 "https://github.com/hatemogi/liftio2021-scala"}
+         {:주제 "2021 라인 백엔드 개발자의 함수형 프로그래밍 언어 실전 사용기"
           :유튜브 "https://www.youtube.com/watch?v=H6JxxWL6bJI"}
          {:주제 "2017년 제6 회 리스프 세미나 — 클로저 소개"
           :미디엄 "https://medium.com/happyprogrammer-in-jeju/클로저-소개-제6회-리스프-세미나-발표-dc6700e0821d"}
@@ -115,45 +117,81 @@
 
 (def 사이드프로젝트
   [:section [:h2 "사이드 프로젝트"]
-   (map (fn [{제목 :제목 링크 :링크}]
-          [:article.사이드프로젝트 [:h4 제목]])
-        [{:제목 "스타벅스 WiFi 자동 연결 앱" :링크 ""}
-         {:제목 "큐브 풀이 연습 3D 웹페이지" :링크 ""}
-         {:제목 "마크다운 to TufteCSS" :링크 ""}
-         {:제목 "한글 자소별 색상 구분 타자연습 웹앱" :링크 ""}])])
+   (map (fn [{제목 :제목 링크 :링크 미디엄 :미디엄 데모 :데모 유튜브 :유튜브 깃허브 :깃허브 연도 :연도}]
+          [:article.사이드프로젝트
+           [:div
+            (when 연도 (str 연도 ", "))
+            제목 " "
+            (when 링크 [:a {:href 링크} [:i {:class "fa-solid fa-link"}]]) " "
+            (when 미디엄 [:a {:href 미디엄 :title "설명글"} [:i {:class "fa-brands fa-medium"}]]) " "
+            (when 깃허브 [:a {:href 깃허브 :title "소스코드"} [:i {:class "fa-brands fa-github"}]]) " "
+            (when 데모 [:a {:href 데모 :title "데모"} [:i {:class "fa-solid fa-laptop-code"}]]) " "
+            (when 유튜브 [:a {:href 유튜브 :title "유튜브영상"} [:i {:class "fa-brands fa-youtube"}]])]])
+        (sort-by :연도 >
+                 [{:연도 2017 :제목 "스타벅스 WiFi 자동 연결 앱"
+                   :미디엄 "https://hatemogi.medium.com/list/wifi-199c3b2cb80f"}
+                  {:연도 2022 :제목 "TypeScript와 three.js로 만든 큐브 연습용 웹페이지"
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/큐브-연습용-웹페이지-개발기-0-76e638752776"
+                   :깃허브 "https://github.com/hatemogi/rurucube"
+                   :데모 "https://hatemogi.github.io/rurucube/"}
+                  {:연도 2019 :제목 "GitHub 한글화 실험 프로젝트"
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/github-%ED%95%9C%EA%B8%80%ED%99%94-%EC%8B%A4%ED%97%98-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-5b9e040d1d75"
+                   :깃허브 "https://github.com/hatemogi/github-ko-ext"
+                   :데모 "https://chromewebstore.google.com/detail/github-%ED%95%9C%EA%B8%80%ED%99%94/phhgannnkapemfnciphmbpenaflbngmm?pli=1"}
+                  {:연도 2016 :제목 "마크다운 to TufteCSS"
+                   :미디엄 "https://hatemogi.medium.com/list/44cdde970749"
+                   :깃허브 "https://github.com/hatemogi/tufdown"
+                   :데모 "https://hatemogi.github.io/tufdown/"}
+                  {:연도 2019 :제목 "한글 자소별 색상 구분 타자연습 웹앱"
+                   :미디엄 "https://hatemogi.medium.com/list/4a0f1c85e308"
+                   :깃허브 "https://github.com/hatemogi/hallatype"
+                   :데모 "http://type.hatemogi.com"}
+                  {:연도 2015 :제목 "클로저 배우는 연습문제 모음 번역"
+                   :깃허브 "https://github.com/hatemogi/clojure-koans"
+                   :데모 "https://clojurekoans.hatemogi.com/"}
+                  {:연도 2019 :제목 "Go로 만든, 로그 파일 색칠러"
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/colorlog-%EB%A1%9C%EA%B7%B8-%ED%8C%8C%EC%9D%BC-%EC%83%89%EC%B9%A0%EB%9F%AC-%EA%B0%9C%EB%B0%9C%EA%B8%B0-ad14433a0a75"
+                   :깃허브 "https://github.com/hatemogi/colorlog"}
+                  {:연도 2016 :제목 "클로저 기반 한글 프로그래밍 언어 실험, misaeng"
+                   :깃허브 "https://github.com/hatemogi/misaeng"}
+                  {:연도 2014 :제목 "Dvorak자판과 함께 쓰는, macOS 한글 입력기 (IME)"
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/dvorak%EA%B3%BC-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5%EA%B8%B0-%EA%B0%9C%EB%B0%9C-8940bc4714a1"
+                   :깃허브 "https://github.com/hatemogi/AewolInput"}]))])
 
 (def 교육
   [:section [:h2 "교육 수료"]
    (map (fn [{주제 :주제 연도 :연도 수료증 :수료증}]
           [:article.course
-           [:div.title 연도 ", " 주제 " " [:a {:href 수료증} [:i {:class "fa-solid fa-certificate"}] [:small "수료증"]]]])
-        [{:주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
-          :연도 2022
-          :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
-         {:주제 "Convolutional Neural Networks in TensorFlow"
-          :연도 2022
-          :수료증 "https://coursera.org/share/83e63aa087183fbe753ae0d99a4a0e7d"}
-         {:주제 "Natural Language Processing in TensorFlow"
-          :연도 2022
-          :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
-         {:주제 "Sequences, Time Series and Prediction"
-          :연도 2022
-          :수료증 "https://coursera.org/share/72e4bc85275b4234a9c0384ea6053979"}
-         {:주제 "Effective Programming in Scala"
-          :연도 2021
-          :수료증 "https://coursera.org/share/e3adcc29353c58ae20733d4075c2a97c"}
-         {:주제 "Functional Program Design in Scala"
-          :연도 2019
-          :수료증 "https://coursera.org/share/7ff7f8b81abfbc9df1e81974e1a0c256"}
-         {:주제 "Big Data Analysis with Scala and Spark"
-          :연도 2019
-          :수료증 "https://coursera.org/share/ffd008aeadbb568643b17d7c5f58077a"}
-         {:주제 "Kotlin for Java Developers"
-          :연도 2019
-          :수료증 "https://coursera.org/share/1fea494a120389564cf16c6dcc815888"}
-         {:주제 "Functional Programming Principles in Scala"
-          :연도 2013
-          :수료증 "https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/971423~66457/pdf"}])])
+           [:div.title 연도 ", " 주제 " "
+            [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]]]])
+        (sort-by :연도 >
+                 [{:주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
+                   :연도 2022
+                   :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
+                  {:주제 "Convolutional Neural Networks in TensorFlow"
+                   :연도 2022
+                   :수료증 "https://coursera.org/share/83e63aa087183fbe753ae0d99a4a0e7d"}
+                  {:주제 "Natural Language Processing in TensorFlow"
+                   :연도 2022
+                   :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
+                  {:주제 "Sequences, Time Series and Prediction"
+                   :연도 2022
+                   :수료증 "https://coursera.org/share/72e4bc85275b4234a9c0384ea6053979"}
+                  {:주제 "Effective Programming in Scala"
+                   :연도 2021
+                   :수료증 "https://coursera.org/share/e3adcc29353c58ae20733d4075c2a97c"}
+                  {:주제 "Functional Program Design in Scala"
+                   :연도 2019
+                   :수료증 "https://coursera.org/share/7ff7f8b81abfbc9df1e81974e1a0c256"}
+                  {:주제 "Big Data Analysis with Scala and Spark"
+                   :연도 2019
+                   :수료증 "https://coursera.org/share/ffd008aeadbb568643b17d7c5f58077a"}
+                  {:주제 "Kotlin for Java Developers"
+                   :연도 2019
+                   :수료증 "https://coursera.org/share/1fea494a120389564cf16c6dcc815888"}
+                  {:주제 "Functional Programming Principles in Scala"
+                   :연도 2013
+                   :수료증 "https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/971423~66457/pdf"}]))])
 
 (def 꼬리말 [:footer [:p "@hatemogi"]])
 
