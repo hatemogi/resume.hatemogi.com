@@ -167,13 +167,16 @@
                    :깃허브 "https://github.com/hatemogi/misaeng"}
                   {:연도 2014 :제목 "Dvorak자판과 함께 쓰는, macOS 한글 입력기 (IME)"
                    :미디엄 "https://medium.com/happyprogrammer-in-jeju/dvorak%EA%B3%BC-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5%EA%B8%B0-%EA%B0%9C%EB%B0%9C-8940bc4714a1"
-                   :깃허브 "https://github.com/hatemogi/AewolInput"}]))])
+                   :깃허브 "https://github.com/hatemogi/AewolInput"}
+                  {:연도 2014 :제목 "유의적 버전 Sematic Versioning 한국어 번역"
+                   :깃허브 "https://github.com/hatemogi/semver"
+                   :링크 "https://semver.org/lang/ko/"}]))])
 
 (def 교육
   [:section [:h2 "교육 수료"]
    (map (fn [{주제 :주제 연도 :연도 수료증 :수료증}]
           [:article.course
-           [:div.고딕 연도 ", " 주제 " "
+           [:div 연도 ", " 주제 " "
             [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]]]])
         (sort-by :연도 >
                  [{:주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
