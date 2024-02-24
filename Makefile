@@ -8,7 +8,7 @@ build: ${SRC}
 	cp style.css docs/
 
 watch:
-	fswatch ${SRC} style.css | xargs -L1 -I{} sh -c "clj -M ${SRC} > ${OUT} || cp style.css docs/ && open ${OUT}"
+	fswatch ${SRC} docs/style.css | xargs -L1 -I{} sh -c "clj -M ${SRC} > ${OUT} && open ${OUT}"
 
 deploy: build
 	aws --profile resume s3 cp docs s3://${S3_BUCKET}/ --recursive --exclude '.DS_Store'

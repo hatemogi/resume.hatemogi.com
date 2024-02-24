@@ -5,21 +5,22 @@ on: [push]
 jobs:
   build-index:
     runs-on: ubuntu-latest
-    
-    steps:     
+
+    steps:
       - name: Prepare java
         uses: actions/setup-java@v4.0.0
         with:
           distribution: 'corretto'
-          java-version: '17'  
-          
+          java-version: '17'
+
+      - name: install deps
+        run: sudo apt-get install -y rlwrap
+
       - name: Setup Clojure
         uses: DeLaGuardo/setup-clojure@12.5
         with:
           cli: 1.11.1.1435
 
-      - name: install deps
-        run: sudo apt-get install -y rlwrap
 
       - name: clojure version
         run: clj --version
@@ -27,6 +28,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-        
       - name: Build
-        run: clj -M resume.clj > index.html
+        run: clj -M resume.clj > docs/index.html
+
+      - name: Deploy onto S3
+        uses: hannut91/aws-cli@v1.18.43
+        with:
+          args: s3 cp docs s3://resume.hatemogi.com/ --recursive
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ap-northeast-2
