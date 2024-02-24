@@ -48,8 +48,8 @@
      [:div [:h3 "경험한 기술"] (li ["Rust" "Go" "Python" "C" "C++" "Pascal" "Assembly" "Kubernetes"])]]
     [:div
      [:h3 "외국어"]
-     [:p "🇺🇸 듣기/읽기 상급, 말하기/쓰기 중급. TOEFL CBT 260"]
-     [:p "🇯🇵 듣기/말하기 중급. 읽기/쓰기 초급"]]]])
+     [:div.컬럼 [:div "🇺🇸 English 듣기/읽기 상급, 말하기/쓰기 중급. TOEFL CBT 260"]
+      [:div "🇯🇵 日本語 듣기/말하기 중급. 읽기/쓰기 초급"]]]]])
 
 
 (def 경력
@@ -114,9 +114,9 @@
          {:주제 "LiftIO 2021 - 연속된 우연으로 꾸려진 개발팀의 함수형 Scala 활용기"
           :링크 "https://liftio.org/2021/"
           :깃허브 "https://github.com/hatemogi/liftio2021-scala"}
-         {:주제 "2021 라인 백엔드 개발자의 함수형 프로그래밍 언어 실전 사용기"
+         {:주제 "2021, 라인 백엔드 개발자의 함수형 프로그래밍 언어 실전 사용기"
           :유튜브 "https://www.youtube.com/watch?v=H6JxxWL6bJI"}
-         {:주제 "2017년 제6 회 리스프 세미나 — 클로저 소개"
+         {:주제 "2017, 제6회 리스프 세미나 — 클로저 소개"
           :미디엄 "https://medium.com/happyprogrammer-in-jeju/클로저-소개-제6회-리스프-세미나-발표-dc6700e0821d"}
          {:주제 "PyCon2016 라이트닝톡 — 개발하는 라이더의 연비계산"
           :미디엄 "https://medium.com/happyprogrammer-in-jeju/파이콘-2016-라이트닝-토크-발표-후기-763135a2a623"
