@@ -6,10 +6,7 @@ jobs:
   build-index:
     runs-on: ubuntu-latest
     
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      
+    steps:     
       - name: Prepare java
         uses: actions/setup-java@v4.0.0
         with:
@@ -21,8 +18,15 @@ jobs:
         with:
           cli: 1.11.1.1435
 
+      - name: install deps
+        run: apt-get install -y rlwrap
+
       - name: clojure version
         run: clj --version
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
         
       - name: Build
         run: clj -M resume.clj > index.html
