@@ -19,7 +19,7 @@ jobs:
           cli: 1.11.1.1435
 
       - name: install deps
-        run: apt-get install -y rlwrap
+        run: sudo apt-get install -y rlwrap
 
       - name: clojure version
         run: clj --version
