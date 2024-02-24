@@ -48,7 +48,8 @@
      [:div [:h3 "경험한 기술"] (li ["Rust" "Go" "Python" "C" "C++" "Pascal" "Assembly" "Kubernetes"])]]
     [:div
      [:h3 "외국어"]
-     [:div.컬럼 [:div "🇺🇸 English 듣기/읽기 상급, 말하기/쓰기 중급. TOEFL CBT 260"]
+     [:div.컬럼
+      [:div "🇺🇸 English 듣기/읽기 상급, 말하기/쓰기 중급. TOEFL CBT 260"]
       [:div "🇯🇵 日本語 듣기/말하기 중급. 읽기/쓰기 초급"]]]]])
 
 
@@ -87,7 +88,7 @@
      {:기간 "2000.1 - 2003.4" :회사명 "한국물류정보통신" :직위 "시스템팀 > 사원"
       :스택 ["Java" "C" "UNIX"]
       :한일 ["네트워크 관리자. 방화벽, 라우터, 스위치 장비 관리. 보안 네트워크 구축"
-           "각종 UNIX 환경, C언어로 TCP / X.25 통신망 EDI 문서 중계 시스템 유지보수"]}])])
+           "각종 UNIX 환경, C언어로 TCP/X.25 통신망 EDI 문서 중계 시스템 유지보수"]}])])
 
 (def 학력
   [:section [:h2 "학력"]
@@ -203,10 +204,13 @@
                    :수료증 "https://coursera.org/share/1fea494a120389564cf16c6dcc815888"}
                   {:연도 2013 :주제 "Functional Programming Principles in Scala"
                    :수료증 "https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/971423~66457/pdf"}
-                  {:연도 2011 :주제 "Erlang OTP Course, San Francisco 교육 수료"}
+                  {:연도 2011 :주제 "Erlang OTP Course, San Francisco 교육 수료"
+                   :수료증 "/img/ErlangOTP.jpg"}
                   {:연도 2006 :주제 "연세대학교 > 경영대학원 > 연세-Daum MBA 과정 수료"}
-                  {:연도 2001 :주제 "Java Architecture Planning & Design for J2EE 교육 수료"}
-                  {:연도 2000 :주제 "Sun Certified Java Programmer for JAVA2 자격증 취득"}
+                  {:연도 2001 :주제 "Java Architecture Planning & Design for J2EE 교육 수료"
+                   :수료증 "/img/J2EE.jpg"}
+                  {:연도 2000 :주제 "Sun Certified Java Programmer for JAVA2 자격증 취득"
+                   :수료증 "/img/SCJP2.jpg"}
                   {:연도 1999 :주제 "정보처리기사 자격증 취득"}]))])
 
 (def 꼬리말 [:footer [:p "@hatemogi"]])
