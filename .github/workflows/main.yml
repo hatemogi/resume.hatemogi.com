@@ -25,6 +25,9 @@ jobs:
       - name: clojure version
         run: clj --version
 
+      - name: setup awscli
+        uses: hsupu/setup-awscli@v1
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -32,18 +35,14 @@ jobs:
         run: clj -M resume.clj > docs/index.html
 
       - name: Deploy onto S3
-        uses: hannut91/aws-cli@1.32.49
-        with:
-          args: s3 cp docs s3://resume.hatemogi.com/ --recursive
+        run: aws s3 cp docs s3://resume.hatemogi.com/ --recursive
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ap-northeast-2
 
       - name: Invalidate CloudFront cache
-        uses: hannut91/aws-cli@1.32.49
-        with:
-          args: cloudfront create-invalidation --no-cli-pager --distribution-id=${{env.CLOUD_FRONT_DISTRIBUTION}} --paths='/*' --recursive
+        run: aws cloudfront create-invalidation --no-cli-pager --distribution-id=${{env.CLOUD_FRONT_DISTRIBUTION}} --paths='/*'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
