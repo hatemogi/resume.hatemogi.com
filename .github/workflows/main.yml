@@ -20,6 +20,9 @@ jobs:
         uses: DeLaGuardo/setup-clojure@12.5
         with:
           cli: 1.11.1.1435
-      
+
+      - name: clojure version
+        run: clj --version
+        
       - name: Build
         run: clj -M resume.clj > index.html
