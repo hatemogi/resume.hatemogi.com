@@ -32,7 +32,7 @@ jobs:
         run: clj -M resume.clj > docs/index.html
 
       - name: Deploy onto S3
-        uses: hannut91/aws-cli@v1.18.43
+        uses: hannut91/aws-cli@1.32.49
         with:
           args: s3 cp docs s3://resume.hatemogi.com/ --recursive
         env:
