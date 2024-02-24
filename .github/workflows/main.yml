@@ -24,12 +24,13 @@ jobs:
         with:
           cli: 1.11.1.1435
 
-
       - name: clojure version
         run: clj --version
 
       - name: setup awscli
-        uses: hsupu/setup-awscli@v1
+        run: (curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip") &&
+          (unzip awscliv2.zip) &&
+          (sudo ./aws/install)
 
       - name: Checkout
         uses: actions/checkout@v4
