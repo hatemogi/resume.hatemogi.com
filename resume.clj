@@ -66,7 +66,7 @@
      {:기간 "2020.3 - 2022.5" :회사명 "라인+" :직위 "ADS > MONAD > Lead"
       :스택 ["Scala" "PostgreSQL" "Kafka"]
       :한일 ["LINE 메신저 타임라인 서비스 광고 수익 배분 시스템 개발"
-           "Scala로 개발해서 운영하며, 개발팀을 구축해 리딩했습니다."
+           "함수형 Scala로 개발해서 운영, 개발팀을 구축해 리딩"
            "일본과 대만에 성공적 서비스"]}
      {:기간 "2018.9 - 2020.2" :회사명 "NHN" :직위 "Dooray개발실 > 수석"
       :스택 ["Kotlin" "Java" "MySQL" "Akka" "Netty"]
@@ -82,7 +82,7 @@
            "사내Git저장소 서비스 개발 및 전파"
            "Daum 캘린더 > RubyOnRails로 개발. 국내 최초급 AJAX 웹앱"
            "마이피플 > C 채팅 부하분산 서버 개발 "
-           "Daum카페 > Java 한줄메모장 개발"
+           "Daum카페 > Java 한줄메모장 개발. 1일 3억 페이지뷰 처리"
            "일본 도쿄 지사 근무 18개월"]}
      {:기간 "2000.1 - 2003.4" :회사명 "한국물류정보통신" :직위 "시스템팀 > 사원"
       :스택 ["Java" "C" "UNIX"]
@@ -99,7 +99,7 @@
   [:section [:h2 "발표 경험"]
    (map (fn [{주제 :주제 링크 :링크 영상 :영상 유튜브 :유튜브 미디엄 :미디엄 깃허브 :깃허브}]
           [:article.발표
-           [:div 주제 " "
+           [:div.강조 주제 " "
             (when 링크 [:a {:href 링크} [:i {:class "fa-solid fa-link"}]]) " "
             (when 깃허브 [:a {:href 깃허브} [:i {:class "fa-brands fa-github"}]]) " "
             (when 미디엄 [:a {:href 미디엄} [:i {:class "fa-brands fa-medium"}]]) " "
@@ -137,6 +137,8 @@
             (when 유튜브 [:a {:href 유튜브 :title "유튜브영상"} [:i {:class "fa-brands fa-youtube"}]])]])
         (sort-by :연도 >
                  [{:연도 2023 :제목 "Elm으로 만든 탁구 점수판 웹앱"}
+                  {:연도 2023 :제목 "AWS Lambda와 Rust로 만든 수익 알리미"
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/aws%EC%97%90-%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-rust%EB%A1%9C-%EC%88%98%EC%9D%B5-%EC%95%8C%EB%A6%AC%EB%AF%B8-%EB%A7%8C%EB%93%A0-%EC%9D%B4%EC%95%BC%EA%B8%B0-a2eda678f6bc"}
                   {:연도 2017 :제목 "스타벅스 WiFi 자동 연결 앱"
                    :미디엄 "https://hatemogi.medium.com/list/wifi-199c3b2cb80f"}
                   {:연도 2022 :제목 "TypeScript와 three.js로 만든 큐브 연습용 웹페이지"

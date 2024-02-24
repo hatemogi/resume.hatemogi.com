@@ -2,6 +2,9 @@ name: Build
 
 on: [push]
 
+env:
+  CLOUD_FRONT_DISTRIBUTION: EOG2UY17N1S9W
+
 jobs:
   build-index:
     runs-on: ubuntu-latest
