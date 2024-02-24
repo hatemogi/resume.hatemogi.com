@@ -136,7 +136,9 @@
             (when 데모 [:a {:href 데모 :title "데모"} [:i {:class "fa-solid fa-laptop-code"}]]) " "
             (when 유튜브 [:a {:href 유튜브 :title "유튜브영상"} [:i {:class "fa-brands fa-youtube"}]])]])
         (sort-by :연도 >
-                 [{:연도 2023 :제목 "Elm으로 만든 탁구 점수판 웹앱"}
+                 [{:연도 2023 :제목 "우아한 고성능 프로그래밍 언어 Rust 입문 및 활용 강의 제작"
+                   :링크 "https://inf.run/LPYW" :깃허브 "https://github.com/hatemogi/rust-course"}
+                  {:연도 2023 :제목 "Elm으로 만든 탁구 점수판 웹앱"}
                   {:연도 2023 :제목 "AWS Lambda와 Rust로 만든 수익 알리미"
                    :미디엄 "https://medium.com/happyprogrammer-in-jeju/aws%EC%97%90-%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4-rust%EB%A1%9C-%EC%88%98%EC%9D%B5-%EC%95%8C%EB%A6%AC%EB%AF%B8-%EB%A7%8C%EB%93%A0-%EC%9D%B4%EC%95%BC%EA%B8%B0-a2eda678f6bc"}
                   {:연도 2017 :제목 "스타벅스 WiFi 자동 연결 앱"
