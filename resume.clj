@@ -172,7 +172,11 @@
                    :깃허브 "https://github.com/hatemogi/AewolInput"}
                   {:연도 2014 :제목 "유의적 버전 Sematic Versioning 한국어 번역"
                    :깃허브 "https://github.com/hatemogi/semver"
-                   :링크 "https://semver.org/lang/ko/"}]))])
+                   :링크 "https://semver.org/lang/ko/"}
+                  {:연도 1998 :제목 "wkobo, X11용 2D 슈팅 게임을 Windows용으로 포팅 개발"
+                   :링크 "https://www.old-games.com/download/3123/wkobo"}
+                  {:연도 1994 :제목 "직접 제작한 한글 그래픽 라이브러리를 활용해 만든 3인용 테트리스 게임"
+                   :유튜브 "https://www.youtube.com/watch?v=U0ZhSs5a3Ws"}]))])
 
 (def 교육
   [:section [:h2 "교육 수료"]
