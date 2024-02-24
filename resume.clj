@@ -183,35 +183,31 @@
    (map (fn [{주제 :주제 연도 :연도 수료증 :수료증}]
           [:article.course
            [:div 연도 ", " 주제 " "
-            [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]]]])
+            (when 수료증 [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]])]])
         (sort-by :연도 >
-                 [{:주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
-                   :연도 2022
+                 [{:연도 2022 :주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
                    :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
-                  {:주제 "Convolutional Neural Networks in TensorFlow"
-                   :연도 2022
+                  {:연도 2022 :주제 "Convolutional Neural Networks in TensorFlow"
                    :수료증 "https://coursera.org/share/83e63aa087183fbe753ae0d99a4a0e7d"}
-                  {:주제 "Natural Language Processing in TensorFlow"
-                   :연도 2022
+                  {:연도 2022 :주제 "Natural Language Processing in TensorFlow"
                    :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
-                  {:주제 "Sequences, Time Series and Prediction"
-                   :연도 2022
+                  {:연도 2022 :주제 "Sequences, Time Series and Prediction"
                    :수료증 "https://coursera.org/share/72e4bc85275b4234a9c0384ea6053979"}
-                  {:주제 "Effective Programming in Scala"
-                   :연도 2021
+                  {:연도 2021 :주제 "Effective Programming in Scala"
                    :수료증 "https://coursera.org/share/e3adcc29353c58ae20733d4075c2a97c"}
-                  {:주제 "Functional Program Design in Scala"
-                   :연도 2019
+                  {:연도 2019 :주제 "Functional Program Design in Scala"
                    :수료증 "https://coursera.org/share/7ff7f8b81abfbc9df1e81974e1a0c256"}
-                  {:주제 "Big Data Analysis with Scala and Spark"
-                   :연도 2019
+                  {:연도 2019 :주제 "Big Data Analysis with Scala and Spark"
                    :수료증 "https://coursera.org/share/ffd008aeadbb568643b17d7c5f58077a"}
-                  {:주제 "Kotlin for Java Developers"
-                   :연도 2019
+                  {:연도 2019 :주제 "Kotlin for Java Developers"
                    :수료증 "https://coursera.org/share/1fea494a120389564cf16c6dcc815888"}
-                  {:주제 "Functional Programming Principles in Scala"
-                   :연도 2013
-                   :수료증 "https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/971423~66457/pdf"}]))])
+                  {:연도 2013 :주제 "Functional Programming Principles in Scala"
+                   :수료증 "https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/971423~66457/pdf"}
+                  {:연도 2011 :주제 "Erlang OTP Course, San Francisco 교육 수료"}
+                  {:연도 2006 :주제 "연세대학교 경영대학원 연세-Daum MBA 과정 수료"}
+                  {:연도 2001 :주제 "Java Architecture Planning & Design for J2EE 교육 수료"}
+                  {:연도 2000 :주제 "Sun Certified Java Programmer for JAVA2 자격증 취득"}
+                  {:연도 1999 :주제 "정보처리기사 자격증 취득"}]))])
 
 (def 꼬리말 [:footer [:p "@hatemogi"]])
 
