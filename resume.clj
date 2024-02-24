@@ -57,9 +57,9 @@
    (map
     (fn [{기간 :기간 회사명 :회사명 직위 :직위 스택 :스택 한일 :한일}]
       [:article.경력
-       [:div.컬럼.고딕 [:div.강조 회사명] [:div 직위] [:div 기간]]
+       [:div.컬럼 [:div.강조.고딕 회사명] [:div.고딕 직위] [:div 기간]]
        [:div.기술스택 (str/join ", " 스택)]
-       [:ul.job-description (li 한일)]])
+       [:ul.한일 (li 한일)]])
     [{:기간 "2022.5 - 현재" :회사명 "컨스택츠 코리아" :직위 "백엔드 개발자"
       :스택 ["Haskell" "Scala" "Elm" "PostreSQL" "Google Cloud Platform"]
       :한일 ["Haskell로 신규 백엔드 시스템을 구축 중입니다."]}
@@ -80,19 +80,19 @@
       :스택 ["Java" "MySQL" "Ruby" "Linux" "C"]
       :한일 ["Daum 클라우드기술팀 > 팀장 > 사내 클라우드 플랫폼 구축 운영"
            "Daum 사내Git저장소 서비스 개발 및 전파"
-           "Daum 캘린더 > RubyOnRails로 개발. 국내 최초급 Web2.0 웹앱"
-           "Daum 마이피플 > C 채팅 부하분산 서버 개발 "
+           "Daum 캘린더 > RubyOnRails로 개발. 국내 최초급 Web2.0 웹앱 "
+           "Daum 마이피플 > C 채팅 부하분산 서버 개발"
            "Daum 카페 > Java 한줄메모장 개발. 1일 3억 페이지뷰 처리"
            "Daum 일본 도쿄 지사 근무 18개월"]}
      {:기간 "2000.1 - 2003.4" :회사명 "한국물류정보통신" :직위 "시스템팀 > 사원"
       :스택 ["Java" "C" "UNIX"]
       :한일 ["네트워크 관리자. 방화벽, 라우터, 스위치 장비 관리. 보안 네트워크 구축"
-           "각종 UNIX 환경, C언어로 TCP / X.25 통신망 EDI 문서 중계 시스템 개발"]}])])
+           "각종 UNIX 환경, C언어로 TCP / X.25 통신망 EDI 문서 중계 시스템 유지보수"]}])])
 
 (def 학력
   [:section [:h2 "학력"]
    [:article.학력
-    [:div.학교.컬럼.고딕 [:div.강조 "홍익대학교 컴퓨터공학과 졸업"] [:div.기간 "1996 - 2000"]]
+    [:div.학교.컬럼 [:div.강조.고딕 "홍익대학교 > 공과대학 > 컴퓨터공학 > 공학사"] [:div.기간 "1996 - 2000"]]
     [:div.설명 [:div "전공성적우수 장학금 2학기분 수령"] [:div "졸업과제: 리얼타임 리눅스 RTLinux 커널 분석"]]]])
 
 (def 발표경험
@@ -204,7 +204,7 @@
                   {:연도 2013 :주제 "Functional Programming Principles in Scala"
                    :수료증 "https://www.coursera.org/api/legacyCertificates.v1/spark/statementOfAccomplishment/971423~66457/pdf"}
                   {:연도 2011 :주제 "Erlang OTP Course, San Francisco 교육 수료"}
-                  {:연도 2006 :주제 "연세대학교 경영대학원 연세-Daum MBA 과정 수료"}
+                  {:연도 2006 :주제 "연세대학교 > 경영대학원 > 연세-Daum MBA 과정 수료"}
                   {:연도 2001 :주제 "Java Architecture Planning & Design for J2EE 교육 수료"}
                   {:연도 2000 :주제 "Sun Certified Java Programmer for JAVA2 자격증 취득"}
                   {:연도 1999 :주제 "정보처리기사 자격증 취득"}]))])
