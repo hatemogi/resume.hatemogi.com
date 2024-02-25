@@ -111,8 +111,11 @@ article.경력 {
   padding: 10px;
 }
 
-.강조 {
+.고딕 {
   font-family: var(--sans-font);
+}
+
+.강조 {
   font-weight: bold;
 }
 

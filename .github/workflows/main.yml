@@ -24,12 +24,8 @@ jobs:
         with:
           cli: 1.11.1.1435
 
-
       - name: clojure version
         run: clj --version
-
-      - name: setup awscli
-        uses: hsupu/setup-awscli@v1
 
       - name: Checkout
         uses: actions/checkout@v4
