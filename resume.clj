@@ -217,15 +217,18 @@
   [:section [:h2 "인기 글"]
    (map (fn [{주제 :주제 미디엄 :미디엄 연도 :연도}]
           [:article.인기글
-           [:div.title 연도 ", " 주제 " "
+           [:div.고딕 연도 ", " 주제 " "
             (when 미디엄 [:a {:href 미디엄 :title "설명글"} [:i {:class "fa-brands fa-medium"}]]) " "]])
         (sort-by :연도 >
                  [{:주제 "개알못인 당신이 웹개발을 시작한다면 (1)"
                    :연도 2017
-                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/%EA%B0%9C%EC%95%8C%EB%AA%BB%EC%9D%B8-%EB%8B%B9%EC%8B%A0%EC%9D%B4-%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%9C%EB%8B%A4%EB%A9%B4-1-9415c014a130"}
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/9415c014a130"}
                   {:주제 "다음 캘린더 서비스 개발 비하인드 스토리"
-                   :연도 2020
-                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/%EB%8B%A4%EC%9D%8C-%EC%BA%98%EB%A6%B0%EB%8D%94-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9D%98-%EB%B9%84%ED%95%98%EC%9D%B8%EB%93%9C-%EC%8A%A4%ED%86%A0%EB%A6%AC-ec0faac67f05"}]))])
+                   :연도 2015
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/ec0faac67f05"}
+                  {:주제 "3/8 판교 긴급 출장 24시"
+                   :연도 2016
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/3bad70af3176"}]))])
 
 (def 꼬리말 [:footer [:p "@hatemogi"]])
 
