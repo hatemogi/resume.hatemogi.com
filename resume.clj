@@ -13,7 +13,7 @@
    [:meta {:property "og:title" :content "김대현 이력서"}]
    [:meta {:property "og:description" :content "시니어 백엔드 개발자 김대현 이력서"}]
    [:meta {:property "og:type" :content "website"}]
-   [:meta {:property "og:image" :content "https://hatemogi.com/img/hatemogi.png"}]
+   [:meta {:property "og:image" :content "https://resume.hatemogi.com/img/resume.png"}]
    [:meta {:property "og:image:width" :content "1024"}]
    [:meta {:property "og:image:height" :content "1024"}]
    [:meta {:property "og:url" :content "https://resume.hatemogi.com/"}]
