@@ -32,9 +32,31 @@
 
 조금 더 단순해지는 정도이지만, 추가로, 저 표현 중간중간 clojure표현식을 그대로 쓸 수 있다는 점이 매력입니다.
 
+```clojure
+(def 인기글
+  [:section [:h2 "인기 글"]
+   (map (fn [{주제 :주제 미디엄 :미디엄 연도 :연도}]
+          [:article.인기글
+           [:div.고딕 연도 ", " 주제 " "
+            (when 미디엄 [:a {:href 미디엄 :title "설명글"} [:i {:class "fa-brands fa-medium"}]]) " "]])
+        (sort-by :연도 >
+                 [{:주제 "개알못인 당신이 웹개발을 시작한다면 (1)"
+                   :연도 2017
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/9415c014a130"}
+                  {:주제 "다음 캘린더 서비스 개발 비하인드 스토리"
+                   :연도 2015
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/ec0faac67f05"}
+                  {:주제 "3/8 판교 긴급 출장 24시"
+                   :연도 2016
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/3bad70af3176"}]))])
+```
+
+이런식으로 데이터와 HTML 뼈대를 분리해서 중복표현을 줄일 수 있습니다. 대신 클로저 문법을 조금 알아야 하겠죠. ;-)
 
 
 ## Prepare
+
+macOS 기준으로는 아래와 같이 준비합니다.
 
 
 ```sh
@@ -47,6 +69,7 @@ $ brew install clojure fswatch awscli
 $ make build
 ```
 
+일회성으로 `docs/index.html`을 생성합니다.
 
 ## Watch
 
@@ -54,7 +77,7 @@ $ make build
 $ make watch
 ```
 
-## Deploy
+지속적으로 편집하고자 할 때는, `make watch`를 걸어둡니다. `resume.clj` 파일이 변경될 때마다 `index.html`을 생상합니다.
 
 ```sh
 $ make deploy
