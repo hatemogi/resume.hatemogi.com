@@ -235,7 +235,9 @@
    [:article.취미
     [:div.컬럼.고딕 [:div "달리기"] [:div "누적 2,500㎞ 달림"] [:div "하프마라톤 PB 1시간 49분 (5:08/㎞)"]]]])
 
-(def 꼬리말 [:footer [:p "@hatemogi"]])
+(def 꼬리말
+  [:footer
+   [:a {:href "https://github.com/hatemogi/resume.hatemogi.com"} [:i {:class "fa-brands fa-github"}]]])
 
 (def 본문 [:main 경력 스킬셋 발표경험 사이드프로젝트 학력 교육 인기글 취미])
 
