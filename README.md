@@ -79,6 +79,8 @@ $ make watch
 
 지속적으로 편집하고자 할 때는, `make watch`를 걸어둡니다. `resume.clj` 파일이 변경될 때마다 `index.html`을 생상합니다.
 
+## Deploy
+
 ```sh
 $ make deploy
 ```
