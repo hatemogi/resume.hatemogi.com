@@ -77,7 +77,7 @@ $ make build
 $ make watch
 ```
 
-지속적으로 편집하고자 할 때는, `make watch`를 걸어둡니다. `resume.clj` 파일이 변경될 때마다 `index.html`을 생상합니다.
+지속적으로 편집하고자 할 때는, `make watch`를 걸어둡니다. `resume.clj` 파일이 변경될 때마다 `index.html`을 만듭니다.
 
 ## Deploy
 
@@ -87,6 +87,9 @@ $ make deploy
 
 저는 S3에 올려서 CloudFront로 연결해두었습니다만, GitHub Pages에 준비하셔도 문제 없이 공개하실 수 있습니다.
 
+## 라이선스
+
+이 템플릿은 HTML이력서 작성이 필요한 누구나 마음대로 사용하실 수 있습니다.
 
 ## Acknowledgment
 
@@ -94,3 +97,4 @@ $ make deploy
 
 * [넥슨 Lv.2 고딕](https://noonnu.cc/font_page/435)
 * [고운돋움](https://noonnu.cc/font_page/734)
+
