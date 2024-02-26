@@ -4,7 +4,38 @@
 
 혹시, 이력서를 웹페이지 버전으로 작성하려는데, 클로저 EDN 표현도 조금 다룰 줄 안신다면, 이 템플릿을 활용해서 이력서를 웹페이지 버전으로 준비해보시는 것도 좋을 것 같습니다.
 
+## Example
+
+```clojure
+[:section [:h2 "취미"]
+ [:article.취미
+  [:div.컬럼.고딕
+   [:div "달리기"]
+   [:div "누적 2,500㎞ 달림"]
+   [:div "하프마라톤 PB 1시간 49분 (5:08/㎞)"]]]]
+```
+
+예를들어, 위 EDN 표현은, 아래 HTML로 변환됩니다.
+
+```html
+<section>
+  <h2>취미</h2>
+  <article class="취미">
+    <div class="컬럼 고딕">
+      <div>달리기</div>
+      <div>누적 2,500㎞ 달림</div>
+      <div>하프마라톤 PB 1시간 49분 (5:08/㎞)</div>
+    </div>
+  </article>
+<section>
+```
+
+조금 더 단순해지는 정도이지만, 추가로, 저 표현 중간중간 clojure표현식을 그대로 쓸 수 있다는 점이 매력입니다.
+
+
+
 ## Prepare
+
 
 ```sh
 $ brew install clojure fswatch awscli
