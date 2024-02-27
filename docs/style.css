@@ -16,7 +16,7 @@
   --고딕체: 'NEXON Lv2 Gothic';
   --돋움체: 'GowunDodum-Regular';
   --노랑: rgb(255, 219, 90);
-  --파랑:
+  --파랑: rgb(103, 189, 255);
 }
 
 body {
@@ -85,7 +85,7 @@ h4 {
 section>h2 {
   padding: 5px;
   border-radius: 3px;
-  background-color: rgb(103, 189, 255);
+  background-color: var(--파랑);
 }
 
 main {
@@ -162,7 +162,7 @@ blockquote {
   background-color: #eee;
   border-radius: 5px;
   padding: 1em;
-  margin: 2rem;
+  margin: 1em;
 }
 
 footer {

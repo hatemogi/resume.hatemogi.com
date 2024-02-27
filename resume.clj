@@ -126,7 +126,9 @@
          {:주제 "PyCon2016 라이트닝톡 — 개발하는 라이더의 연비계산"
           :미디엄 "https://medium.com/happyprogrammer-in-jeju/파이콘-2016-라이트닝-토크-발표-후기-763135a2a623"
           :유튜브 "https://www.youtube.com/watch?v=46UkzB-3z3Y"}
-         {:주제 "DevOn2013 — 사내 Git저장소 허브 개발사례" :링크 "https://www.slideshare.net/hatemogi/devon2013-git"}])])
+         {:주제 "DevOn2013 — 사내 Git저장소 허브 개발사례" :링크 "https://www.slideshare.net/hatemogi/devon2013-git"}])
+
+   [:blockquote "내향적 성격이지만, 필요에 따른 연습으로 익숙해져 발표에 두려움이 없습니다."]])
 
 (def 사이드프로젝트
   [:section [:h2 "사이드 프로젝트"]
@@ -185,7 +187,8 @@
                   {:연도 1998 :제목 "wkobo, X11용 2D 슈팅 게임을 Windows용으로 포팅 개발"
                    :링크 "https://www.old-games.com/download/3123/wkobo"}
                   {:연도 1994 :제목 "직접 제작한 한글 그래픽 라이브러리를 활용해 만든 3인용 테트리스 게임"
-                   :유튜브 "https://www.youtube.com/watch?v=U0ZhSs5a3Ws"}]))])
+                   :유튜브 "https://www.youtube.com/watch?v=U0ZhSs5a3Ws"}]))
+   [:blockquote "틈틈이 개인 프로젝트를 진행합니다. 깃허브에서 소스 코드, 데모 페이지에서 시연 확인 가능합니다. 개발 후기를 글로 적기도 합니다."]])
 
 (def 교육
   [:section [:h2 "교육 수료"]
@@ -236,7 +239,10 @@
                    :미디엄 "https://medium.com/happyprogrammer-in-jeju/ec0faac67f05"}
                   {:주제 "3/8 판교 긴급 출장 24시"
                    :연도 2016
-                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/3bad70af3176"}]))])
+                   :미디엄 "https://medium.com/happyprogrammer-in-jeju/3bad70af3176"}]))
+   [:blockquote "개발 블로그 삼아 미디엄에 글을 적기도 합니다. 그 중 조회수 기준으로 호응이 좋았던 글입니다. "
+    "글에 개인 성향을 많이 드러나는 것은 물론이고, "
+    "개발할 때 코드를 작성하는 것과, 사람이 읽을 글을 작성하는 것에 공통점이 많다고 생각하여 이력서에도 적었습니다."]])
 
 (def 취미
   [:section [:h2 "취미"]
