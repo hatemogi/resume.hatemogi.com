@@ -13,13 +13,13 @@
 }
 
 :root {
-  --sans-font: 'NEXON Lv2 Gothic';
-  --serif-font: 'GowunDodum-Regular';
+  --고딕체: 'NEXON Lv2 Gothic';
+  --돋움체: 'GowunDodum-Regular';
 }
 
 body {
   margin: 0;
-  font-family: var(--serif-font);
+  font-family: var(--돋움체);
   font-size: 16px;
   line-height: 1.6rem;
 }
@@ -76,7 +76,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--sans-font);
+  font-family: var(--고딕체);
   font-weight: 700;
 }
 
@@ -112,7 +112,7 @@ article.경력 {
 }
 
 .고딕 {
-  font-family: var(--sans-font);
+  font-family: var(--고딕체);
 }
 
 .강조 {
@@ -126,6 +126,22 @@ article.경력 {
 
 .컬럼>* {
   flex: 1;
+}
+
+.기술스택 {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.기술 {
+  border-radius: 7px;
+  background-color: rgb(255, 219, 90);
+  color: black;
+  padding: 0px 7px;
+  margin: 2px;
+  font-family: var(--고딕체);
+  font-size: 12px;
 }
 
 blockquote {

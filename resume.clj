@@ -27,7 +27,7 @@
 (def 소셜링크
   (map
    (fn [{link :link icon :icon}]
-     [:a {:href link :target "_blank"} [:i {:class (str "fab " icon)}]])
+     [:a {:href link} [:i {:class (str "fab " icon)}]])
    [{:link "https://github.com/hatemogi" :icon "fa-github-alt"}
     {:link "https://www.linkedin.com/in/hatemogi/" :icon "fa-linkedin-in"}
     {:link "https://medium.com/@hatemogi/" :icon "fa-medium"}
@@ -59,18 +59,18 @@
     (fn [{기간 :기간 회사명 :회사명 직위 :직위 스택 :스택 한일 :한일}]
       [:article.경력
        [:div.컬럼 [:div.강조.고딕 회사명] [:div.고딕 직위] [:div 기간]]
-       [:div.기술스택 (str/join ", " 스택)]
+       [:div.기술스택 (map (fn [기술] [:div.기술 기술]) 스택)]
        [:ul.한일 (li 한일)]])
     [{:기간 "2022.5 - 현재" :회사명 "컨스택츠 코리아" :직위 "백엔드 개발자"
-      :스택 ["Haskell" "Scala" "Elm" "PostreSQL" "Google Cloud Platform"]
+      :스택 ["Haskell" "Scala" "Elm" "PostreSQL" "Google Cloud Platform" "Kubernetes" "Functional Programming"]
       :한일 ["Haskell로 신규 서비스 백엔드 시스템 구축"]}
      {:기간 "2020.3 - 2022.5" :회사명 "라인+" :직위 "ADS > MONAD > Lead"
-      :스택 ["Scala" "PostgreSQL" "Kafka"]
+      :스택 ["Scala" "Elm" "PostgreSQL" "Kafka" "Cats" "Traefik" "Functional Programming"]
       :한일 ["LINE 메신저 타임라인 서비스 광고 수익 배분 시스템 개발"
            "함수형 Scala로 개발해서 운영, 개발팀 빌딩"
            "일본과 대만에 성공적 서비스"]}
      {:기간 "2018.9 - 2020.2" :회사명 "NHN" :직위 "Dooray개발실 > 수석"
-      :스택 ["Kotlin" "Java" "MySQL" "Akka" "Netty"]
+      :스택 ["Kotlin" "Java" "MySQL" "Akka" "Netty" "Spring Boot" "Nginx" "Redis"]
       :한일 ["업무용 메신저 백엔드를 담당"
            "고성능 Java Akka 프레임워크 기반 메시징 서버 개발"
            "서버당 최대 5만 세션을 처리하는 실험"
@@ -78,11 +78,11 @@
            "Java Netty기반 SMTP 서버, LDAP 서버 개발"
            "CalDAV 서버 개발"]}
      {:기간 "2004.5 - 2015.3" :회사명 "카카오 (Daum)" :직위 "CTO Staff > 개발리더"
-      :스택 ["Java" "MySQL" "Ruby" "Linux" "C"]
+      :스택 ["Java" "MySQL" "Ruby" "Python" "Linux" "C" "Nginx" "Redis" "Spring"]
       :한일 ["Daum 클라우드기술팀 > 팀장 > 사내 클라우드 플랫폼 구축 운영"
            "Daum 기반기술팀 > 사내Git저장소 서비스 개발 및 전파"
            "Daum 캘린더 > 개발TFT장 > RubyOnRails로 개발. 국내 최초급 Web2.0 웹앱 "
-           "Daum 마이피플 > 초기 개발 멤버 > C 채팅 부하분산 서버 개발"
+           "Daum 마이피플 > 초기 개발 멤버 > 시스템 아키텍쳐 설계 및 C 채팅 부하분산 서버 개발"
            "Daum 일본 도쿄 지사 > 개발팀장 > 18개월 근무"
            "Daum 카페 > Java 한줄메모장, 투표게시판 개발. 1일 3억 페이지뷰 처리"]}
      {:기간 "2000.1 - 2003.4" :회사명 "한국물류정보통신" :직위 "시스템팀 > 사원"
@@ -186,8 +186,8 @@
 (def 교육
   [:section [:h2 "교육 수료"]
    (map (fn [{주제 :주제 연도 :연도 수료증 :수료증}]
-          [:article.course
-           [:div 연도 ", " 주제 " "
+          [:article.교육
+           [:div.고딕 연도 ", " 주제 " "
             (when 수료증 [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]])]])
         (sort-by :연도 >
                  [{:연도 2022 :주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
