@@ -122,7 +122,7 @@
          {:주제 "PyCon2016 라이트닝톡 — 개발하는 라이더의 연비계산"
           :미디엄 "https://medium.com/happyprogrammer-in-jeju/파이콘-2016-라이트닝-토크-발표-후기-763135a2a623"
           :유튜브 "https://www.youtube.com/watch?v=46UkzB-3z3Y"}
-         {:주제 "DevOn2013 — 사내Git저장소개발사례" :링크 "https://www.slideshare.net/hatemogi/devon2013-git"}])])
+         {:주제 "DevOn2013 — 사내 Git저장소 허브 개발사례" :링크 "https://www.slideshare.net/hatemogi/devon2013-git"}])])
 
 (def 사이드프로젝트
   [:section [:h2 "사이드 프로젝트"]
