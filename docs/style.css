@@ -15,6 +15,8 @@
 :root {
   --고딕체: 'NEXON Lv2 Gothic';
   --돋움체: 'GowunDodum-Regular';
+  --노랑: rgb(255, 219, 90);
+  --파랑:
 }
 
 body {
@@ -83,7 +85,7 @@ h4 {
 section>h2 {
   padding: 5px;
   border-radius: 3px;
-  background-color: rgb(97, 176, 255);
+  background-color: rgb(103, 189, 255);
 }
 
 main {
@@ -128,15 +130,15 @@ article.경력 {
   flex: 1;
 }
 
-.기술스택 {
+.경력 .기술스택 {
   display: flex;
   flex-direction: row;
   justify-content: left;
 }
 
-.기술 {
+.기술스택>.기술 {
   border-radius: 7px;
-  background-color: rgb(255, 219, 90);
+  background-color: var(--노랑);
   color: black;
   padding: 0px 7px;
   margin: 2px;
@@ -144,7 +146,19 @@ article.경력 {
   font-size: 12px;
 }
 
+.보유기술 .기술셋 {
+  border-radius: 5px;
+  margin: 10px;
+  padding: 1em;
+  background-color: var(--노랑);
+}
+
+.기술셋>h3 {
+  margin: 0 0 10px 0;
+}
+
 blockquote {
+  font-family: var(--고딕체);
   background-color: #eee;
   border-radius: 5px;
   padding: 1em;
@@ -153,7 +167,7 @@ blockquote {
 
 footer {
   padding: 1em 1.5em;
-  background: #A7B8BF;
+  background: #c5ccd3;
   color: white;
   text-align: right;
 }

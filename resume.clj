@@ -41,11 +41,15 @@
 
 (def 스킬셋
   [:section [:h2 "보유기술"]
-   [:article.skills
+   [:article.보유기술
     [:div.컬럼
-     [:div [:h3 "우수한 기술"] (li ["Scala" "Clojure" "Haskell" "Elm" "Java"])]
-     [:div [:h3 "충분한 기술"] (li ["TypeScript" "JavaScript" "Kotlin" "PostgreSQL" "Amazon Web Services" "Google Cloud Platform" "Netty" "Docker"])]
-     [:div [:h3 "경험한 기술"] (li ["Rust" "Go" "Python" "C" "C++" "Pascal" "Assembly" "Kubernetes"])]]
+     [:div.기술셋 [:h3 "우수한 기술"] (li ["Scala" "Clojure" "Haskell" "Elm" "Java"])]
+     [:div.기술셋 [:h3 "충분한 기술"] (li ["TypeScript" "JavaScript" "Kotlin" "PostgreSQL" "Amazon Web Services" "Google Cloud Platform" "Netty" "Docker"])]
+     [:div.기술셋 [:h3 "경험한 기술"] (li ["Rust" "Go" "Python" "C" "C++" "Pascal" "Assembly" "Kubernetes"])]]
+    [:blockquote "주관적 자기 평가입니다. 당장 업무 환경에서 주변 다른 개발자들에게 설명하며 일할 수 있는 수준은 "
+     [:span.강조 "우수한 기술"] ", "
+     "스스로 현업 환경에서 제 몫을 하며 활용할 수 있는 " [:span.강조 "충분한 기술"] ", "
+     "(재)적응이 필요하지만 몇 주 안에 업무 환경에서 홀로 역량을 발휘할 수 있는 수준은 " [:span.강조 "경험한 기술"] "로 구분해 적었습니다."]
     [:div
      [:h3 "외국어"]
      [:div.컬럼
