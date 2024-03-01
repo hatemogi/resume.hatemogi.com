@@ -1,5 +1,4 @@
-(require '[hiccup.page :refer [html5]]
-         '[clojure.string :as str])
+(require '[hiccup.page :refer [html5]])
 
 (def li (partial map (partial vector :li)))
 
@@ -63,7 +62,7 @@
     (fn [{기간 :기간 회사명 :회사명 직위 :직위 스택 :스택 한일 :한일}]
       [:article.경력
        [:div.컬럼 [:div.강조.고딕 회사명] [:div.고딕 직위] [:div 기간]]
-       [:div.기술스택 (map (fn [기술] [:div.기술 기술]) 스택)]
+       [:div.기술스택 (map (partial vector :div.기술) 스택)]
        [:ul.한일 (li 한일)]])
     [{:기간 "2022.5 - 현재" :회사명 "컨스택츠 코리아" :직위 "백엔드 개발자"
       :스택 ["Haskell" "Scala" "Elm" "PostreSQL" "Google Cloud Platform" "Kubernetes" "Functional Programming"]
