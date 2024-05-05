@@ -262,7 +262,7 @@
   [:footer
    [:a {:href "https://github.com/hatemogi/resume.hatemogi.com"} [:i {:class "fa-brands fa-github"}]]])
 
-(def 본문 [:main 경력 스킬셋 발표경험 사이드프로젝트 학력 교육 인기글 취미 핵심가치])
+(def 본문 [:main 경력 스킬셋 발표경험 사이드프로젝트 학력 교육 인기글 취미])
 
 (def 바디 [:body 머리말 본문 꼬리말])
 
