@@ -64,9 +64,12 @@
        [:div.컬럼 [:div.강조.고딕 회사명] [:div.고딕 직위] [:div 기간]]
        [:div.기술스택 (map (partial vector :div.기술) 스택)]
        [:ul.한일 (li 한일)]])
-    [{:기간 "2022.5 - 현재" :회사명 "컨스택츠 코리아" :직위 "백엔드 개발자"
+    [{:기간 "2024.4 - 현재" :회사명 "디노티시아" :직위 "백엔드 개발자"
+      :스택 ["Rust" "AWS" "LLM"]
+      :한일 ["Rust로 신규 서비스 백엔드 시스템 구축"]}
+     {:기간 "2022.5 - 2024.4" :회사명 "컨스택츠 코리아" :직위 "백엔드 개발자"
       :스택 ["Haskell" "Scala" "Elm" "PostreSQL" "Google Cloud Platform" "Kubernetes" "Functional Programming"]
-      :한일 ["Haskell로 신규 서비스 백엔드 시스템 구축"]}
+      :한일 ["Haskell, Scala로 신규 서비스 백엔드 시스템 구축"]}
      {:기간 "2020.3 - 2022.5" :회사명 "라인+" :직위 "ADS > MONAD > Lead"
       :스택 ["Scala" "Elm" "PostgreSQL" "Kafka" "Cats" "Traefik" "Functional Programming"]
       :한일 ["LINE 메신저 타임라인 서비스 광고 수익 배분 시스템 개발"
@@ -246,13 +249,20 @@
 (def 취미
   [:section [:h2 "취미"]
    [:article.취미
-    [:div.컬럼.고딕 [:div "달리기"] [:div "누적 2,500㎞ 달림"] [:div "하프마라톤 PB 1시간 49분"]]]])
+    [:div.컬럼.고딕 [:div "달리기"] [:div "누적 2,800㎞ 달림"]
+     [:div "하프마라톤 PB 1시간 48분 "
+      [:a {:href "img/half-marathon.png" :title "기록증"} [:i {:class "fa-solid fa-certificate"}]]]]]])
+
+(def 핵심가치
+  [:section [:h2 "핵심가치"]
+   [:article.가치
+    [:div ""]]])
 
 (def 꼬리말
   [:footer
    [:a {:href "https://github.com/hatemogi/resume.hatemogi.com"} [:i {:class "fa-brands fa-github"}]]])
 
-(def 본문 [:main 경력 스킬셋 발표경험 사이드프로젝트 학력 교육 인기글 취미])
+(def 본문 [:main 경력 스킬셋 발표경험 사이드프로젝트 학력 교육 인기글 취미 핵심가치])
 
 (def 바디 [:body 머리말 본문 꼬리말])
 
