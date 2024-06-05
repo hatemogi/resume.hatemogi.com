@@ -199,7 +199,9 @@
            [:div.고딕 연도 ", " 주제 " "
             (when 수료증 [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]])]])
         (sort-by :연도 >
-                 [{:연도 2022 :주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
+                 [{:연도 2024 :주제 "Generative AI with Large Language Models"
+                   :수료증 "https://coursera.org/share/cbb894bf33bbfaad57274644769e8df3"}
+                  {:연도 2022 :주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
                    :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
                   {:연도 2022 :주제 "Convolutional Neural Networks in TensorFlow"
                    :수료증 "https://coursera.org/share/83e63aa087183fbe753ae0d99a4a0e7d"}
