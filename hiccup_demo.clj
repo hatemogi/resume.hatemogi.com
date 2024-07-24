@@ -1,4 +1,6 @@
-(require '[hiccup.core :refer [html]])
+(require '[hiccup2.core :refer [html]])
+
+(html [:div])
 
 (html [:div])
 
