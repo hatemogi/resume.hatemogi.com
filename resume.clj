@@ -269,7 +269,7 @@
 (def 취미
   [:section [:h2 "취미"]
    [:article.취미
-    [:div.컬럼.고딕 [:div "달리기"] [:div "누적 2,800㎞ 달림"]
+    [:div.컬럼.고딕 [:div "달리기"] [:div "누적 3,200㎞ 달림"]
      [:div "하프마라톤 PB 1시간 48분 "
       [:a {:href "img/half-marathon.png" :title "기록증"} [:i {:class "fa-solid fa-certificate"}]]]]]])
 
