@@ -199,7 +199,25 @@
            [:div.고딕 연도 ", " 주제 " "
             (when 수료증 [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]])]])
         (sort-by :연도 >
-                 [{:연도 2024 :주제 "Generative AI with Large Language Models"
+                 [{:연도 2024 :주제 "Rust for DevOps"
+                   :수료증 "https://coursera.org/share/30f4fe4e3ed7ef0aef95ea5e194ef31b"}
+                  {:연도 2024 :주제 "Vector Search and Embeddings"
+                   :수료증 "https://coursera.org/share/23a79219173eced3d153458c6b738590"}
+                  {:연도 2024 :주제 "Python and Rust with Linux Command Line Tools"
+                   :수료증 "https://coursera.org/share/323f93d367af70ac27d35de3e99a5cd3"}
+                  {:연도 2024 :주제 "Rust Fundamentals"
+                   :수료증 "https://coursera.org/share/b3ced10d549bb453a2dc27d3c06ce833"}
+                  {:연도 2024 :주제 "Introduction to Concurrent Programming with GPUs"
+                   :수료증 "https://coursera.org/share/031abbdc29092813dd4e4ab9c8235e02"}
+                  {:연도 2024 :주제 "Local LLMs with llamafile"
+                   :수료증 "https://coursera.org/share/28b27ef7dcace9030ca9f267a23be6e0"}
+                  {:연도 2024 :주제 "Data Engineering with Rust"
+                   :수료증 "https://coursera.org/share/a8d6f8a5658746e0e2acbb2134ad65f3"}
+                  {:연도 2024 :주제 "Beginning Llamafile for Local Large Language Models (LLMs)"
+                   :수료증 "https://coursera.org/share/81c02cc9c0b8190d40717c744891d377"}
+                  {:연도 2024 :주제 "Rust for Large Language Model Operations (LLMOps)"
+                   :수료증 "https://coursera.org/share/653085831c46898231f20dbe75c3a130"}
+                  {:연도 2024 :주제 "Generative AI with Large Language Models"
                    :수료증 "https://coursera.org/share/cbb894bf33bbfaad57274644769e8df3"}
                   {:연도 2022 :주제 "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning"
                    :수료증 "https://coursera.org/share/34d3458e34c700f354ab36b780e739c6"}
