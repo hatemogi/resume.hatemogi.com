@@ -199,7 +199,9 @@
            [:div.고딕 연도 ", " 주제 " "
             (when 수료증 [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]])]])
         (sort-by :연도 >
-                 [{:연도 2024 :주제 "Rust for DevOps"
+                 [{:연도 2024 :주제 "Object-Oriented Data Structures in C++"
+                   :수료증 "https://coursera.org/share/e51a315f25ab2eb8c3e6d66e17de16b6"}
+                  {:연도 2024 :주제 "Rust for DevOps"
                    :수료증 "https://coursera.org/share/30f4fe4e3ed7ef0aef95ea5e194ef31b"}
                   {:연도 2024 :주제 "Vector Search and Embeddings"
                    :수료증 "https://coursera.org/share/23a79219173eced3d153458c6b738590"}
