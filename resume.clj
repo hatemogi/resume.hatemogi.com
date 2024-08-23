@@ -199,7 +199,9 @@
            [:div.고딕 연도 ", " 주제 " "
             (when 수료증 [:a {:href 수료증 :title "수료증"} [:i {:class "fa-solid fa-certificate"}]])]])
         (sort-by :연도 >
-                 [{:연도 2024 :주제 "Ordered Data Structures"
+                 [{:연도 2024 :주제 "Accelerated Computer Science Fundamentals"
+                   :수료증 "https://coursera.org/share/dcfb6f581592810253d991a80b250538"}
+                  {:연도 2024 :주제 "Ordered Data Structures"
                    :수료증 "https://coursera.org/share/309a4187546674bee7cf1822a84a5b8a"}
                   {:연도 2024 :주제 "Object-Oriented Data Structures in C++"
                    :수료증 "https://coursera.org/share/e51a315f25ab2eb8c3e6d66e17de16b6"}
