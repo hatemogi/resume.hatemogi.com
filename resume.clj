@@ -277,9 +277,12 @@
 (def 취미
   [:section [:h2 "취미"]
    [:article.취미
-    [:div.컬럼.고딕 [:div "달리기"] [:div "누적 3,200㎞ 달림"]
-     [:div "하프마라톤 PB 1시간 48분 "
-      [:a {:href "img/half-marathon.png" :title "기록증"} [:i {:class "fa-solid fa-certificate"}]]]]]])
+    [:div.컬럼.고딕 [:div "달리기"] [:div "누적 3,500㎞ 달림"]
+     [:div
+      [:div "하프마라톤 1시간 48분 "
+       [:a {:href "img/half-marathon.png" :title "기록증"} [:i {:class "fa-solid fa-certificate"}]]]
+      [:div "트레일러닝 20K, 50K 완주 "
+       [:a {:href "https://utmb.world/runner/5569536.daehyun.kim" :title "공식 프로필"} [:i {:class "fa-solid fa-certificate"}]]]]]]])
 
 (def 핵심가치
   [:section [:h2 "핵심가치"]
