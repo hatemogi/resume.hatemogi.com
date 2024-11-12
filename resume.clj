@@ -277,7 +277,7 @@
 (def 취미
   [:section [:h2 "취미"]
    [:article.취미
-    [:div.컬럼.고딕 [:div "달리기"] [:div "누적 3,500㎞ 달림"]
+    [:div.컬럼.고딕 [:div "달리기"] [:div "누적 3,650㎞ 달림"]
      [:div
       [:div "JTBC 마라톤 2024 완주 "
        [:a {:href "img/jtbc_2024.jpg" :title "기록증"} [:i {:class "fa-solid fa-certificate"}]]]
