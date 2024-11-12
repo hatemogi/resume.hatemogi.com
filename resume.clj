@@ -279,6 +279,8 @@
    [:article.취미
     [:div.컬럼.고딕 [:div "달리기"] [:div "누적 3,500㎞ 달림"]
      [:div
+      [:div "JTBC 마라톤 2024 완주 "
+       [:a {:href "img/jtbc_2024.jpg" :title "기록증"} [:i {:class "fa-solid fa-certificate"}]]]
       [:div "하프마라톤 1시간 48분 "
        [:a {:href "img/half-marathon.png" :title "기록증"} [:i {:class "fa-solid fa-certificate"}]]]
       [:div "트레일러닝 20K, 50K 완주 "
